@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>itab切换</title>
+  <style>
+    * {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tab_list {
+      width: 1000px;
+      height: 50px;
+      background-color: pink;
+      margin: 0 auto;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ul li a {
+      width: 200px;
+      height: 50px;
+
+      display: block;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+      text-decoration: none;
+    }
+
+    ul li a:hover {
+      background-color: green;
+    }
+
+    .tab_con {
+      width: 1000px;
+      height: 500px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <body>
+    <div class="tab">
+      <div class="tab_list">
+        <ul>
+          <li class="current"><a href="#">商品介绍</a></li>
+          <li><a href="#">规格和包装</a></li>
+          <li><a href="#">售后保障</a></li>
+          <li><a href="#">商品评价</a></li>
+          <li><a href="#">手机社区</a></li>
+        </ul>
+      </div>
+      <div class="tab_con">
+        <div class="item" style="display: block;">商品介绍模块内容</div>
+        <div class="item" style="display: none;">规格与包装模块内容</div>
+        <div class="item" style="display: none;">售后保障模块内容</div>
+        <div class="item" style="display: none;">商品评价模块内容</div>
+        <div class="item" style="display: none;">手机社区模块内容</div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const lis = document.querySelectorAll('.tab_list li')
+    const items = document.querySelectorAll('.item')
+    for (let i = 0; i < lis.length; i++) {
+      lis[i].setAttribute('index', i);
+      lis[i].onclick = changeTab;
+    }
+
+    function changeTab() {
+      // 切换tab选中状态
+      for (let j = 0; j < lis.length; j++) {
+        if (lis[j] !== this) {
+          lis[j].className = ''
+        } else {
+          this.className = 'current'
+        }
+      }
+      // 切换对应item的展示状态
+      let index = this.getAttribute('index');
+      for (let k = 0; k < items.length; k++) {
+        if (items[k] !== items[index]) {
+          items[k].style.display = 'none'
+        } else {
+          items[index].style.display = 'block'
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
