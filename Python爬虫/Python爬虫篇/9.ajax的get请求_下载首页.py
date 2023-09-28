@@ -22,3 +22,6 @@ content = response.read().decode('utf-8')
 
 with open ('douban1,json','w',encoding='utf-8') as fp:
   fp.write(content)
+
+# open 方法的返回值赋值给变量 f，当离开 with 代码块的时候，系统会自动调用 f.close() 方法，
+# with 的作用和使用 try/finally 语句是一样的
