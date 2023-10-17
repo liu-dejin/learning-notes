@@ -18,7 +18,7 @@ import urllib.parse
 def create_request(page):
     base_url =' https://movie.douban.com/j/chart/top_list?type=5&interval_id=100%3A90&action=&'
     data = {
-        'start' :(page-1) * 20,
+        'start' : (page-1) * 20,
         'limit' : 20
     }
 

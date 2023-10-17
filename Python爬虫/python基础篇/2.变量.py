@@ -21,9 +21,9 @@ img = 'kis2.cn'
 print(img)
 
 # 2.变量的数据类型
-# numbers:
+# numbers
 # int float 
-# boolean:
+# boolean
 # true False
 # string 
 # list 
@@ -31,7 +31,7 @@ print(img)
 # dictionary
 
 money = 5000
-money1=1.2
+money1 = 1.2
 
 # boolean 布尔
 # 流程控制语句会用到
