@@ -59,7 +59,7 @@ def down_load(content):
     for i in range(len(src_list)):
         src = "https:" + src_list[i]
         name = name_list[i]
-        urllib.request.urlretrieve(url=src, filename=  name + '.jpg')
+        urllib.request.urlretrieve(url=src, filename= './img/' + name + '.jpg')
 
 
 if __name__ == '__main__':
