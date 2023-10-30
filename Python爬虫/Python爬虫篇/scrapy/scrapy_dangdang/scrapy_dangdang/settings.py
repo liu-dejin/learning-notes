@@ -62,9 +62,11 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "scrapy_dangdang.pipelines.ScrapyDangdangPipeline": 300,
-#}
+
+ITEM_PIPELINES = {
+	# 管道可以有很多个,那么管道是有优先级的,1-1000   值越小优先级越高
+   "scrapy_dangdang.pipelines.ScrapyDangdangPipeline": 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

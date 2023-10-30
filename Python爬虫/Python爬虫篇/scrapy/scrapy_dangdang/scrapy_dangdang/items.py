@@ -11,4 +11,3 @@ class ScrapyDangdangItem(scrapy.Item):
     # name = scrapy.Field()
     scr = scrapy.Field()  # 照片
     name = scrapy.Field()  # 名字
-    price = scrapy.Field()  # 价格
