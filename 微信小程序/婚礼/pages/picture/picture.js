@@ -1,4 +1,4 @@
-// pages/marry/marry.js
+// pages/picture/picture.js
 Page({
 
   /**
