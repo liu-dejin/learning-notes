@@ -56,7 +56,7 @@ class MysqlPipeline:
 		# DB_HOST = '127.0.0.1'
 		# DB_PORT = 3306
 		# DB_USER = 'root'
-		# DB_PASSWORD = 'jinhuaer1110'
+		# DB_PASSWORD = '11111'
 		# DB_NAME = 'spider'
 		# DB_CHARSET = 'utf-8'
 

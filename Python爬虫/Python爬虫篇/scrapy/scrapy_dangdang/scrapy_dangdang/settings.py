@@ -66,7 +66,7 @@ ROBOTSTXT_OBEY = True
 DB_HOST = '127.0.0.1'
 DB_PORT = 3306
 DB_USER = 'root'
-DB_PASSWORD = 'jinhuaer1110'
+DB_PASSWORD = '111111110'
 DB_NAME = 'spider'
 # utf-8 的- 写
 DB_CHARSET = 'utf-8'
