@@ -29,3 +29,4 @@ class DangSpider(scrapy.Spider):
 #           获取一个book就就将book交给pipeline
             yield book
 
+# 每一页业务逻辑是一样的，所以后续页面直接调用即可
