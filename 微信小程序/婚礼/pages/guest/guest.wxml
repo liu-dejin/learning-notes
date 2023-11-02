@@ -1,4 +1,4 @@
-<image class="bg" src="/images/bj_2.png" />
+<image class="bg" src="/images/bj_2.png"></image>
 <form>
   <view class="content">
     <view class="input">

@@ -3,7 +3,8 @@
     "pages/invite/invite",
     "pages/picture/picture",
     "pages/video/video",
-    "pages/guest/guest"
+    "pages/guest/guest",
+    "pages/guest1/guest1"
   ],
   "window": {
     "backgroundTextStyle": "light",

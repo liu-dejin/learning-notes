@@ -5,17 +5,19 @@
 
 .content {
   width: 80vw;
-  position: fixed;
+  height: 40vh;
+  position: absolute;
   left: 10vw;
-  bottom: 8vh;
+  bottom: 10vh;
 }
 
 .content .input {
-  font-size: large;
-  border: 1rpx solid black;
+
+  border: 1rpx solid black; 
   border-radius: 10rpx;
   padding: 1.5vh 40rpx;
   margin-bottom: 1.5vh;
+  font-size: large; /* 比父级字体大一点 */
   color: red;
 }
 
@@ -38,7 +40,7 @@
 }
 
 .check .checkbox-grop checkbox {
-  margin-left: 20rpx;
+  margin-left: 30rpx;
 }
 
 .check .checkbox-grop checkbox:nth-child(1) {
