@@ -127,30 +127,67 @@
       { url: './images/slider08.jpg', title: '谁不想和小猫咪贴贴呢！', color: 'rgb(99, 72, 114)' },
     ]
 
-
-    // 1.获取元素
+    // 获取元素
     const img = document.querySelector('.slider-wrapper img')
     const p = document.querySelector('.slider-footer p')
-    let i = 0   //信号量 控制图片的张数 
-    // 2.开启定时器
-    // console.log(sliderData[i])  //拿到了对应的对象了
-    setInterval(function () {
+    const footer = document.querySelector('.slider-footer')
+
+    // 右侧案例模块
+    const next = document.querySelector('.next')
+    let i = 0
+
+    next.addEventListener('click', function () {
+      // console.log(1)
       i++
-      // 无缝衔接   一共八张图片 数组长度=8
-      if (i >= sliderData.length) {
+      if (i >= 8) {
         i = 0
       }
-      console.log(i)
-      //更换图片路径
+      // console.log(sliderData[i])
+      toggle()
+    })
+
+    // 左侧案例模块
+    const prev = document.querySelector('.prev')
+    prev.addEventListener('click', function () {
+      // console.log(1)
+      i--
+      if (i < 0) {
+        i = 7 //data-length-1
+      }
+      // console.log(sliderData[i])
+      toggle()
+    })
+
+
+    // 声明渲染函数
+    function toggle() {
       img.src = sliderData[i].url
-      // 改文字
       p.innerHTML = sliderData[i].title
-      //小圆点
-      // 先删除以前的active
+      footer.style.backgroundColor = sliderData[i].color
+      //更换小圆点  移除原来的类  添加当前类
+
       document.querySelector('.slider-indicator .active').classList.remove('active')
-      // 只让当前li加active
       document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
+    }
+
+    // 自动播放模块
+    let timerId = setInterval(function () {
+      // 利用js自动调用点击   click()必须加小括号
+      next.click()
     }, 1000)
+
+    const slider = document.querySelector('.slider')
+    slider.addEventListener('mouseenter', function () {
+      clearInterval(timerId)
+    })
+
+    slider.addEventListener('mouseleave', function () {
+      clearInterval(timerId)
+      timerId = setInterval(function () {
+        // 利用js自动调用点击   click()必须加小括号
+        next.click()
+      }, 1000)
+    })
   </script>
 </body>
 

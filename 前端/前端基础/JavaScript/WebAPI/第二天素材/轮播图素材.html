@@ -128,29 +128,6 @@
     ]
 
 
-    // 1.获取元素
-    const img = document.querySelector('.slider-wrapper img')
-    const p = document.querySelector('.slider-footer p')
-    let i = 0   //信号量 控制图片的张数 
-    // 2.开启定时器
-    // console.log(sliderData[i])  //拿到了对应的对象了
-    setInterval(function () {
-      i++
-      // 无缝衔接   一共八张图片 数组长度=8
-      if (i >= sliderData.length) {
-        i = 0
-      }
-      console.log(i)
-      //更换图片路径
-      img.src = sliderData[i].url
-      // 改文字
-      p.innerHTML = sliderData[i].title
-      //小圆点
-      // 先删除以前的active
-      document.querySelector('.slider-indicator .active').classList.remove('active')
-      // 只让当前li加active
-      document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
-    }, 1000)
   </script>
 </body>
 
