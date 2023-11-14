@@ -39,6 +39,7 @@
     }
 
     .result-list {
+      display: none;
       position: absolute;
       left: 0;
       top: 48px;
@@ -63,18 +64,7 @@
 
 </head>
 
-
 <body>
-  <input type="text" name="" id="">
-  <script>
-    // const input = document.querySelector('input')
-    // input.addEventListener('focus', function () {
-    //   console.log('有焦点触发')
-    // })
-    // input.addEventListener('blur', function () {
-    //   console.log('失去焦点触发')
-    // })
-  </script>
   <div class="mi">
     <input type="search" placeholder="小米笔记本">
     <ul class="result-list">
@@ -89,8 +79,16 @@
   </div>
   <script>
     const input = document.querySelector('[type=search]')
-    
+    const ul = document.querySelector('.result-list')
+    input.addEventListener('focus', function () {
+      ul.style.display = 'block'
+      input.classList.add('search')
+    })
 
+    input.addEventListener('blur', function () {
+      ul.style.display = 'none'
+      input.classList.remove('search')
+    })
   </script>
 </body>
 
